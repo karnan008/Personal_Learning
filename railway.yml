@@ -1,0 +1,10 @@
+# railway.yml
+
+services:
+  - name: selenium-smoke-runner
+    startCommand: node server.js
+    dockerfilePath: Dockerfile
+    envVars:
+      NODE_ENV: production
+    healthcheckPath: /runSmoke
+    autoDeploy: true
